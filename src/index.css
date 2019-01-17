@@ -12,3 +12,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@keyframes logo-mode
+{
+  0% { transform: rotate(0deg) }
+  50% { transform: rotate(-180deg)}
+  100% { transform: rotate(-360deg)}
+}
+
+.rotate-logo {
+  display: inline-block;
+  animation-name: logo-mode;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
