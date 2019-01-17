@@ -1,16 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-@connect(
-  store => {
-    return {
-      userInfo = store.userInfo
-    }
-  },
-  dispatch => {
-
-  }
-)
 
 class loginControl extends Component {
   constructor(props) {
@@ -52,4 +42,4 @@ class loginControl extends Component {
   }
 }
 
-export default LoginControl 
+export default LoginControl;

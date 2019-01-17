@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Home extends Component {
   constructor() {
@@ -20,6 +21,7 @@ class Home extends Component {
   render() {
     return (
       <div>ss : {this.state.haslogin}
+      <Link to="/404">404</Link>
       </div>
     )
   }
