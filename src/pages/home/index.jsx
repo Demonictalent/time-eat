@@ -1,27 +1,37 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import { Menu, Icon } from 'antd';
+import './styles.scss'
 class Home extends Component {
   constructor() {
     super()
 
     this.state = {
-      haslogin: false
-    } 
+      haslogin: 'false',
+      current: 'mail'
+    }
   }
 
-  componentDidMount() {
-    setInterval(() => this.clicks(), 5000);
-  }
-
-  clicks() {
-    this.setState({haslogin: 'HAPPY NEW YEAR'})
+  handleClick = (e) => {
+    console.log('click', e)
   }
 
   render() {
     return (
-      <div>ss : {this.state.haslogin}
-      <Link to="/404">404</Link>
+      <div className="box">ss : {this.state.haslogin}
+        <Menu
+          onClick={this.handleClick}
+          selectedKeys={[this.state.current]}
+          mode="horizontal">
+          <Menu.Item key="mail">
+            <Icon type="mail" />
+          </Menu.Item>
+          <Menu.Item key="app">
+            <Icon type="appstore" />
+          </Menu.Item>
+        </Menu>
+        <Link to="/404">404</Link>
       </div>
     )
   }

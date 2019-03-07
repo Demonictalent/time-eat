@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 
 import RouterController from './routers/RouterController';
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   render() {
     let loggedIn = false;
-
     return (
       <div className="Time-Eat">
         <RouterController loggedIn={loggedIn}/>
