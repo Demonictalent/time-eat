@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-
 import RouterController from './routers/RouterController';
-import './App.scss';
+import './layouts/App.scss';
 
 class App extends Component {
   render() {
