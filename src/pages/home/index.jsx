@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
 import { Menu, Icon } from 'antd';
 import './styles.scss'
+
+import store from '../../store'
+import { getUser } from '../../store/actions/user-action';
 class Home extends Component {
   constructor() {
     super()
@@ -14,7 +16,13 @@ class Home extends Component {
   }
 
   handleClick = (e) => {
-    console.log('click', e)
+    store.dispatch(getUser({
+      username: 'sindy',
+      account: 5446,
+      email: 'sindy@gg.mail',
+      userId: '122gae165'
+    }))
+    console.log(store.getState())
   }
 
   render() {
