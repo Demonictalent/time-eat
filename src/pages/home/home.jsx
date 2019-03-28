@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { Menu, Icon } from 'antd';
 import './styles.scss'
 
-import store from '../../store'
-import { getUser } from '../../store/actions/user-action';
+import store from '../../redux/store'
+import { getUser } from '../../redux/actions/user-action';
 class Home extends Component {
   constructor() {
     super()

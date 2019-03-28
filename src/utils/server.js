@@ -6,7 +6,7 @@ axios.interceptors.request.use(
     config.baseUrl = '/api/'
     config.withCredentials = true
     config.timeout = 6000
-    let token = sessionStorage.getItem('access_token')
+    let token = sessionStorage.getItem('jwt.access_token')
     let csrf = store.getters.csrf
     if (token) {
       config.headers = {
@@ -16,7 +16,7 @@ axios.interceptors.request.use(
     }
   }
 )
-
+ 
 
 export function login (data) {
   return axios.post('', data)

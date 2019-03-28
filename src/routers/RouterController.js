@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
-import Home from '../pages/home';
-import Info from '../pages/info';
-import NotFound from '../pages/404';
+import Home from '../pages/home/home';
+import Info from '../pages/info/info';
+import NotFound from '../pages/404/NotFound';
 
 
 class RouterController extends Component {
