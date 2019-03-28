@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, Icon } from 'antd';
-import './styles.scss'
+import './home.scss'
 
 import store from '../../redux/store'
 import { getUser } from '../../redux/actions/user-action';
